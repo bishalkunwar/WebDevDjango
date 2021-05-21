@@ -1,0 +1,12 @@
+{% extends 'web1/base.html' %} {% load static %} {% block title %}/Sending_Email{% endblock title %} {% block maincontent %}
+
+
+<div class="email_form">
+    <h3 class="text-center alert alert-info">Please, feel free to send email.</h3>
+    <form action="" method="POST">
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" class="btn btn-success" value="Email">
+    </form>
+</div>
+
+{% endblock maincontent %}
